@@ -1,35 +1,35 @@
 # Fitness Center Website
 
-Modern ve responsive bir fitness merkezi web sitesi. Bootstrap 5 framework'ü kullanılarak geliştirilmiştir.
+A modern and responsive fitness center website developed using Bootstrap 5 framework.
 
-## 🚀 Özellikler
+## 🚀 Features
 
-- Tam responsive tasarım
+- Fully responsive design
 - Bootstrap 5 framework
-- Modern ve kullanıcı dostu arayüz
-- BMI (Vücut Kitle İndeksi) hesaplayıcı
-- Interaktif sınıf seçimi
-- Google Maps entegrasyonu
-- Font Awesome ikonları
+- Modern and user-friendly interface
+- BMI (Body Mass Index) calculator
+- Interactive class selection
+- Google Maps integration
+- Font Awesome icons
 
-## 📋 Bölümler
+## 📋 Sections
 
 - Responsive navbar
-- Hero bölümü
-- İstatistikler
-- Sınıflar/Dersler
+- Hero section
+- Statistics
+- Classes
   - Yoga
-  - Grup Dersleri
-  - Kişisel Antrenman
+  - Group Training
+  - Personal Training
   - Stretching
-- BMI hesaplayıcı
-- Eğitmenler
-- Ürünler
-- Müşteri yorumları
-- İletişim formu
+- BMI calculator
+- Trainers
+- Products
+- Customer reviews
+- Contact form
 - Footer
 
-## 🛠️ Kullanılan Teknolojiler
+## 🛠️ Technologies Used
 
 - HTML5
 - CSS3
@@ -38,6 +38,6 @@ Modern ve responsive bir fitness merkezi web sitesi. Bootstrap 5 framework'ü ku
 - Font Awesome 6.5.1
 - Google Maps API
 
-## 📦 Kurulum
+## 📦 Installation
 
-1. Projeyi klonlayın.
+1. Clone the project
