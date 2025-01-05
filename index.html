@@ -1,0 +1,586 @@
+<!--
+     Bu dosya, sitenin ana yapısını içerir.
+    İçerik:
+    - Responsive navbar
+    - Hero bölümü
+    - İstatistikler
+    - Sınıflar/Dersler
+    - BMI hesaplayıcı
+    - Eğitmenler
+    - Ürünler
+    - Müşteri yorumları
+    - İletişim formu
+    - Footer
+-->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <header id="header">
+    <div class="container container-fluid">
+      <nav class="navbar navbar-expand-lg">
+        <div class="logo">
+          <img src="images/logo.png" alt="">
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#hero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#classes">Classes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#trainers">Trainers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reviews">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-warning px-3 rounded-3" href="#" id="joinUs">Join Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="text-white">
+    <div class="container">
+      <h5 class="fw-bold bg-primary d-inline-block px-3 py-1 rounded">POWERFULL</h5>
+      <h1 class="display-1 fw-bold mb-4">Group <br> Practice <br> With Trainer</h1>
+      <h5 class="mb-4">Quibusdam deserunt iste dicta esse officiis voluptate nam sint quod, at commodi sequi in? Veritatis natus non quis laborum facere distinctio repellendus!</h5>
+      
+      <!-- Butonlar -->
+      <div class="d-flex gap-5">
+        <a href="#" class="btn btn-primary btn-lg px-4">Sign Up</a>
+        <a href="#" class="btn btn-outline-light btn-lg px-4">Details</a>
+      </div>
+    </div>
+  </section>
+
+    <!-- Stats Section -->
+  <section id="stats" class="py-5 ">
+      <div class="container" style="max-width: 1000px;">
+        <div class="row text-center g-4">
+          <!-- Course Stats -->
+          <div class="col-md-3">
+            <div class="stats-item p-4 bg-white rounded shadow-sm">
+              <h2 class="display-4 fw-bold text-primary mb-2">325</h2>
+              <h5 class="fw-bold text-dark">Course</h5>
+            </div>
+          </div>
+  
+          <!-- Work Out Stats -->
+          <div class="col-md-3">
+            <div class="stats-item p-4 bg-white rounded shadow-sm">
+              <h2 class="display-4 fw-bold text-primary mb-2">405</h2>
+              <h5 class="fw-bold text-dark">Work Out</h5>
+            </div>
+          </div>
+  
+          <!-- Working Hour Stats -->
+          <div class="col-md-3">
+            <div class="stats-item p-4 bg-white rounded shadow-sm">
+              <h2 class="display-4 fw-bold text-primary mb-2">305</h2>
+              <h5 class="fw-bold text-dark">Working Hour</h5>
+            </div>
+          </div>
+  
+          <!-- Happy Client Stats -->
+          <div class="col-md-3">
+            <div class="stats-item p-4 bg-white rounded shadow-sm">
+              <h2 class="display-4 fw-bold text-primary mb-2">705</h2>
+              <h5 class="fw-bold text-dark">Happy Client</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section id="classes" class="py-5">
+    <div class="container">
+      <!-- Başlık Kısmı -->
+      <div class="text-center mb-5">
+        <h2 class="display-4 fw-bold text-primary mb-3">OUR CLASSES</h2>
+        <div class="d-flex justify-content-center">
+          <div class="bg-warning" style="height: 10px; width: 100px; border-radius: 100px ;"></div>
+        </div>
+        <p class="mt-4 text-secondary col-lg-8 mx-auto" style="font-weight: 800;">
+          Sağlıklı bir yaşam için profesyonel eğitmenler eşliğinde size özel dersler sunuyoruz.
+        </p>
+      </div>
+
+      <!-- Sınıf Kategorileri -->
+      <ul class="nav nav-pills justify-content-center gap-4 flex-wrap mb-5" id="classesTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active px-4 py-2" id="yoga-tab" data-bs-toggle="pill" href="#yoga-content" role="tab">Yoga</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link px-4 py-2" id="group-tab" data-bs-toggle="pill" href="#group-content" role="tab">Group</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link px-4 py-2" id="solo-tab" data-bs-toggle="pill" href="#solo-content" role="tab">Solo</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link px-4 py-2" id="stretching-tab" data-bs-toggle="pill" href="#stretching-content" role="tab">Stretching</a>
+        </li>
+      </ul>
+
+      <!-- İçerik Alanı -->
+      <div class="tab-content">
+        <!-- Yoga İçeriği -->
+        <div class="tab-pane fade show active" id="yoga-content">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h3 class="fw-bold mb-4">Why are your Yoga?</h3>
+              <p class="text-secondary mb-4">
+                Yoga ile hem bedeninizi hem zihninizi güçlendirin. Profesyonel eğitmenlerimiz eşliğinde, 
+                stresten arınmış bir yaşam için size özel yoga programları sunuyoruz.
+              </p>
+
+              <h4 class="fw-bold mb-4">When comes Yoga Your Time.</h4>
+              <div class="schedule">
+                <p class="mb-2">Saturday-Sunday: 8:00am - 10:00am</p>
+                <p class="mb-2">Monday-Tuesday: 10:00am - 12:00pm</p>
+                <p class="mb-2">Wednesday-Friday: 3:00pm - 6:00pm</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="images/yoga.jpg" alt="Yoga Practice" class="img-fluid rounded">
+            </div>
+          </div>
+        </div>
+
+        <!-- Group İçeriği -->
+        <div class="tab-pane fade" id="group-content">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h3 class="fw-bold mb-4">Group Training Benefits</h3>
+              <p class="text-secondary mb-4">
+                Grup dersleri ile motivasyonunuzu yüksek tutun. Birlikte çalışmanın enerjisiyle 
+                hedeflerinize daha hızlı ulaşın.
+              </p>
+
+              <h4 class="fw-bold mb-4">Group Training Schedule</h4>
+              <div class="schedule">
+                <p class="mb-2">Monday-Wednesday: 9:00am - 11:00am</p>
+                <p class="mb-2">Tuesday-Thursday: 2:00pm - 4:00pm</p>
+                <p class="mb-2">Friday: 5:00pm - 7:00pm</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="images/group.webp" alt="Group Training" class="img-fluid rounded">
+            </div>
+          </div>
+        </div>
+
+        <!-- Solo İçeriği -->
+        <div class="tab-pane fade" id="solo-content">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h3 class="fw-bold mb-4">Personal Training</h3>
+              <p class="text-secondary mb-4">
+                Birebir eğitim ile kişisel hedeflerinize odaklanın. Size özel hazırlanmış 
+                programlar ile maksimum verim alın.
+              </p>
+
+              <h4 class="fw-bold mb-4">Personal Training Hours</h4>
+              <div class="schedule">
+                <p class="mb-2">By Appointment Only</p>
+                <p class="mb-2">Available: 7:00am - 8:00pm</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="images/solo.jpg" alt="Personal Training" class="img-fluid rounded">
+            </div>
+          </div>
+        </div>
+
+        <!-- Stretching İçeriği -->
+        <div class="tab-pane fade" id="stretching-content">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h3 class="fw-bold mb-4">Stretching Benefits</h3>
+              <p class="text-secondary mb-4">
+                Esnekliğinizi artırın, kas ağrılarınızı azaltın. Düzenli stretching ile 
+                daha sağlıklı bir vücuda kavuşun.
+              </p>
+
+              <h4 class="fw-bold mb-4">Stretching Sessions</h4>
+              <div class="schedule">
+                <p class="mb-2">Daily Morning: 7:00am - 8:00am</p>
+                <p class="mb-2">Daily Evening: 6:00pm - 7:00pm</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="images/stret.webp" alt="Stretching" class="img-fluid rounded">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="bmi-calculator" class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <!-- Sol Taraf - Hesaplayıcı -->
+        <div class="col-lg-5">
+          <h2 class="display-4 fw-bold text-primary mb-3">BMI Calculator</h2>
+          <p class="text-secondary mb-4">
+            Vücut kitle indeksinizi hesaplayın ve sağlıklı kilo aralığınızı öğrenin.
+            BMI değeriniz yaş, cinsiyet, etnik köken ve kas kütlesi gibi faktörleri dikkate almaz.
+          </p>
+          
+          <div class="mb-4">
+            <div class="mb-3">
+              <label class="form-label">Boy (cm)</label>
+              <input type="number" class="form-control" id="height" placeholder="Örn: 175">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Kilo (kg)</label>
+              <input type="number" class="form-control" id="weight" placeholder="Örn: 70">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="calculateBMI()">Hesapla</button>
+          </div>
+          
+          <div id="bmiResult" class="d-none">
+            <h4>Sizin BMI: <span id="bmiValue" class="text-primary fw-bold"></span></h4>
+            <p id="bmiCategory" class="lead"></p>
+          </div>
+        </div>
+
+        <!-- Sağ Taraf - BMI Görseli -->
+        <div class="col-lg-7">
+          <div class="bmi-chart position-relative">
+            <img src="images/bmi-index.jpg" alt="BMI Chart" class="img-fluid">
+            <div id="bmiArrow" class="position-absolute" style="bottom: -20px; left: 0; transition: all 0.3s ease;">
+              <svg height="30" width="30">
+                <polygon points="15,0 0,30 30,30" fill="#ff6b6b"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trainers" class="py-5">
+    <div class="container">
+      <!-- Başlık -->
+      <div class="text-center mb-5">
+        <h2 class="display-4 fw-bold text-primary">OUR BEST TRAINERS</h2>
+        <div class="d-flex justify-content-center">
+          <div class="bg-warning" style="height: 10px; width: 100px; border-radius: 100px;"></div>
+        </div>
+        <p class="mt-4 text-secondary col-lg-8 mx-auto" style="font-weight: 800;">
+          Lorem ipsum is not simply random text. It has roots in a piece of classical at Hampden-Sydney College.
+        </p>
+      </div>
+
+      <!-- Trainer Cards -->
+      <div class="row g-4">
+        <!-- Trainer 1 -->
+        <div class="col-lg-4">
+          <div class="trainer-card">
+            <div class="side-left"></div>
+            <div class="side-right"></div>
+            <div class="trainer-image">
+              <img src="images/trainer1.jpg" alt="Trainer">
+              <div class="trainer-info">
+                <h4 class="trainer-name">Sarah Johnson</h4>
+                <p class="trainer-title">Yoga Trainer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trainer 2 -->
+        <div class="col-lg-4">
+          <div class="trainer-card">
+            <div class="side-left"></div>
+            <div class="side-right"></div>
+            <div class="trainer-image">
+              <img src="images/trainer2.jpg" alt="Trainer">
+              <div class="trainer-info">
+                <h4 class="trainer-name">Mike Wilson</h4>
+                <p class="trainer-title">Fitness Trainer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trainer 3 -->
+        <div class="col-lg-4">
+          <div class="trainer-card">
+            <div class="side-left"></div>
+            <div class="side-right"></div>
+            <div class="trainer-image">
+              <img src="images/trainer3.jpg" alt="Trainer">
+              <div class="trainer-info">
+                <h4 class="trainer-name">Emma Davis</h4>
+                <p class="trainer-title">Cardio Trainer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="purchase" class="py-5">
+    <div class="container">
+      <!-- Başlık -->
+      <div class="text-center mb-5">
+        <h2 class="display-4 fw-bold text-primary">PURCHASE FROM US</h2>
+        <div class="d-flex justify-content-center">
+          <div class="bg-warning" style="height: 10px; width: 100px; border-radius: 100px;"></div>
+        </div>
+        <p class="mt-4 text-secondary col-lg-8 mx-auto" style="font-weight: 800;">
+          Lorem ipsum is not simply random text. It has roots in a piece of classical at Hampden-Sydney College.
+        </p>
+      </div>
+
+      <!-- Ürün Kartları -->
+      <div class="row g-4">
+        <!-- Ürün 1 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <img src="images/purchase1.jpg" alt="Kettlebell" class="product-img">
+            <h3 class="product-title">Kettlebell / 5kg</h3>
+            <div class="price-container">
+              <span class="original-price">89,99$</span>
+              <span class="discounted-price">59,99$</span>
+            </div>
+            <button class="btn w-100">
+              <i class="fas fa-shopping-cart me-2"></i>Add To Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Ürün 2 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <img src="images/purchase2.jpg" alt="Treadmill" class="product-img">
+            <h3 class="product-title">Treadmill</h3>
+            <div class="price-container">
+              <span class="original-price">899,99$</span>
+              <span class="discounted-price">599,99$</span>
+            </div>
+            <button class="btn w-100">
+              <i class="fas fa-shopping-cart me-2"></i>Add To Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Ürün 3 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <img src="images/purchase3.jpg" alt="Dumbbell" class="product-img">
+            <h3 class="product-title">Adjustable Dumbbell</h3>
+            <div class="price-container">
+              <span class="original-price">89,99$</span>
+              <span class="discounted-price">59,99$</span>
+            </div>
+            <button class="btn w-100">
+              <i class="fas fa-shopping-cart me-2"></i>Add To Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Ürün 4 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <img src="images/purchase4.jpg" alt="Kettlebell" class="product-img">
+            <h3 class="product-title">Kettlebell / 3kg</h3>
+            <div class="price-container">
+              <span class="original-price">89,99$</span>
+              <span class="discounted-price">59,99$</span>
+            </div>
+            <button class="btn w-100">
+              <i class="fas fa-shopping-cart me-2"></i>Add To Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="py-5">
+    <div class="container">
+      <!-- Başlık -->
+      <div class="text-center mb-5">
+        <h2 class="display-4 fw-bold text-primary">REVIEW CLIENT</h2>
+        <div class="d-flex justify-content-center">
+          <div class="bg-warning" style="height: 10px; width: 100px; border-radius: 100px;"></div>
+        </div>
+        <p class="mt-4 text-secondary col-lg-8 mx-auto" style="font-weight: 800;">
+          Lorem ipsum is not simply random text. It has roots in a piece of classical at Hampden-Sydney College.
+        </p>
+      </div>
+
+      <!-- Review Kartları -->
+      <div class="row g-4">
+        <!-- Review Card 1 -->
+        <div class="col-lg-6">
+          <div class="review-card">
+            <div class="reviewer-info d-flex align-items-center gap-3 mb-3">
+              <img src="images/client1.jpg" alt="Reviewer" class="reviewer-img">
+              <div>
+                <h4 class="reviewer-name mb-0">Diet Expert</h4>
+                <p class="reviewer-title mb-0">CFO</p>
+              </div>
+            </div>
+            <div class="review-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, sequi quia, libero voluptatibus ducimus earum quidem minus eveniet, ex esse rem sed numquam. Error magnam in vero molestiae tempora nostrum.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Card 2 -->
+        <div class="col-lg-6">
+          <div class="review-card">
+            <div class="reviewer-info d-flex align-items-center gap-3 mb-3">
+              <img src="images/client2.jpg" alt="Reviewer" class="reviewer-img">
+              <div>
+                <h4 class="reviewer-name mb-0">Cardio Trainer</h4>
+                <p class="reviewer-title mb-0">CEO</p>
+              </div>
+            </div>
+            <div class="review-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, sequi quia, libero voluptatibus ducimus earum quidem minus eveniet, ex esse rem sed numquam. Error magnam in vero molestiae tempora nostrum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5">
+    <div class="container">
+      <!-- Başlık -->
+      <div class="text-center mb-5">
+        <h2 class="display-4 fw-bold text-primary">CONTACT US</h2>
+        <div class="d-flex justify-content-center">
+          <div class="bg-warning" style="height: 10px; width: 100px; border-radius: 100px;"></div>
+        </div>
+        <p class="mt-4 text-secondary col-lg-8 mx-auto " style="font-weight: 800;">
+          Lorem ipsum is not simply random text. It has roots in a piece of classical at Hampden-Sydney College.
+        </p>
+      </div>
+
+      <!-- İletişim Formu ve Harita -->
+      <div class="row g-4">
+        <!-- Sol Kolon - Form -->
+        <div class="col-lg-6">
+          <!-- İletişim Bilgileri -->
+          <div class="contact-info mb-4">
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="h5 fw-bold">Mobile Number</h3>
+                <p class="text-secondary">+901234567890</p>
+              </div>
+              <div class="col-md-6">
+                <h3 class="h5 fw-bold">Email Address</h3>
+                <p class="text-secondary">burak@gmail.com</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="contact-form">
+            <h3 class="h4 fw-bold mb-4">Make An Appointment</h3>
+            <form>
+              <div class="mb-3">
+                <input type="text" class="form-control bg-light border-0 py-3" placeholder="Your Name">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control bg-light border-0 py-3" placeholder="Your Email">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control bg-light border-0 py-3" rows="5" placeholder="Your Message"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary px-4 py-3">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Sağ Kolon - Harita -->
+        <div class="col-lg-6">
+          <div class="map-container h-100">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.4486455140947!2d32.85793797677688!3d39.90334088641615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f190a9cea8f%3A0x30a16f25b5f72d4b!2sAtakule!5e0!3m2!1str!2str!4v1709856151020!5m2!1str!2str" 
+              width="100%" 
+              height="100%" 
+              style="border:0; min-height: 500px;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="bg-primary text-white py-5">
+    <div class="container">
+      <!-- Logo - Sola hizalı -->
+      <div class="mb-0">
+        <img src="images/logo.png" alt="Powerfull" class="img-fluid" style="max-height: 60px;">
+      </div>
+
+      <!-- Açıklama Metni - Tam genişlik -->
+      <div class="mb-4">
+        <p class="text-white-50" style="font-size: 1rem; line-height: 1.8; font-weight: 600;">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quod, quae, voluptate, voluptas quia quibusdam voluptatibus quos doloribus quidem fugiat.
+        </p>
+      </div>
+
+      <!-- Linkler - İki Kolon -->
+      <div class="row justify-content-center">
+        <!-- Information -->
+        <div class="col-md-3 text-center">
+          <h4 class="mb-3">Information</h4>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#" class="text-white text-decoration-none mb-2 d-inline-block">About Us</a></li>
+            <li><a href="#" class="text-white text-decoration-none mb-2 d-inline-block">Classes</a></li>
+            <li><a href="#" class="text-white text-decoration-none mb-2 d-inline-block">Blog</a></li>
+            <li><a href="#" class="text-white text-decoration-none mb-2 d-inline-block">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Helpful Links -->
+        <div class="col-md-3 text-center">
+          <h4 class="mb-3">Helpful Links</h4>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#" class="text-white text-decoration-none mb-2 d-inline-block">Services</a></li>
+            <li><a href="#" class="text-white text-decoration-none mb-2 d-inline-block">Supports</a></li>
+            <li><a href="#" class="text-white text-decoration-none mb-2 d-inline-block">Terms & Condition</a></li>
+            <li><a href="#" class="text-white text-decoration-none mb-2 d-inline-block">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>
